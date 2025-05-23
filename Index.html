@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill Bros Digital Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background-color: #111;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .navbar h1 {
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #111;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 2rem;
+    }
+
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+      }
+    }
+
+    header, section, footer {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .btn {
+      background: #22c55e;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 0.5rem;
+      margin-top: 1.5rem;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header/Navbar -->
+  <nav class="navbar">
+    <h1>Skill Bros</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
+<body>
+  <header>
+    <h1>Skill Bros Digital Agency</h1>
+    <p>Mobile-First Digital Solutions That Drive Results</p>
+    <a href="https://instagram.com/skillbros.agency" target="_blank" class="btn">Book a Free Consultation</a>
+  </header>  <section>
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Graphic Design</h3>
+        <p>Logos, social media posts, carousels, and branding kits using Canva and mobile tools.</p>
+      </div>
+      <div class="card">
+        <h3>Video Editing</h3>
+        <p>High-converting reels, shorts, and CapCut templates crafted for engagement.</p>
+      </div>
+      <div class="card">
+        <h3>Content Writing</h3>
+        <p>SEO blogs, product descriptions, ad copy, and scripts with conversion in mind.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Products</h3>
+        <p>Downloadable templates, mini-courses, and tools to level up your brand or content.</p>
+      </div>
+    </div>
+  </section>  <section>
+    <h2>What Our Clients Say</h2>
+    <div class="grid">
+      <div class="card">
+        <p>“Skill Bros gave my brand the boost it needed on Instagram. Loved the designs!”</p>
+        <strong>- Priya, Fashion Creator</strong>
+      </div>
+      <div class="card">
+        <p>“Their reel editing service is top-notch. Highly recommended for content creators.”</p>
+        <strong>- Aarav, Gaming Channel Owner</strong>
+      </div>
+    </div>
+  </section>  <section>
+    <h2>Let's Build Together</h2>
+    <p>Send us a project on Instagram or get a free consultation.</p>
+    <a href="https://instagram.com/skillbros.agency" target="_blank" class="btn">Book a Free Consultation</a>
+  </section>  <footer>
+    &copy; 2025 Skill Bros Digital Agency. All rights reserved.
+  </footer>
+</body>
+</html>
